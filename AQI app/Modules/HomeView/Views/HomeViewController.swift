@@ -14,7 +14,7 @@ protocol CityAQIUpdateDelegate: class {
 class HomeViewController: UIViewController {
     
     //MARK:- IBOutlet
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var cityTableView: UITableView!
     
     //Properties
     weak var cityUpdateDelegate: CityAQIUpdateDelegate?
@@ -26,6 +26,8 @@ class HomeViewController: UIViewController {
         
         //Set refresh delegate for AQI updates
         homeViewModel.refreshDelegate = self
+        
+        cityTableView.accessibilityIdentifier = "table--cityListTableView"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +45,7 @@ extension HomeViewController: AQIRefreshDelegate {
     func refreshAQIdata(cities: [CityViewModel]) {
         self.cities = cities
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            self.cityTableView.reloadData()
         }
         guard cityUpdateDelegate != nil else {return}
         cityUpdateDelegate?.didReceiveCityAQIUpdate(cities: cities)

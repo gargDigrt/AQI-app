@@ -13,6 +13,11 @@ struct City: Codable {
     let name: String
     let aqi: Double
     
+    init(name: String, aqi: Double) {
+        self.name = name
+        self.aqi = aqi
+    }
+    
     enum CodingKeys: String, CodingKey {
         case name = "city"
         case aqi

@@ -197,7 +197,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bH5-sq-et7"/>
                     <connections>
-                        <outlet property="tableView" destination="kXA-UM-lIA" id="J5S-uW-DbB"/>
+                        <outlet property="cityTableView" destination="kXA-UM-lIA" id="J5S-uW-DbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

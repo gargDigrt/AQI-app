@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2251DDF8267FA8B300D2333D /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251DDF7267FA8B300D2333D /* CALayer+Extension.swift */; };
+		2251DDFE267FC95C00D2333D /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251DDFD267FC95C00D2333D /* HomeViewModelTest.swift */; };
+		2251DE02267FC9FB00D2333D /* CityViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251DE01267FC9FA00D2333D /* CityViewModelTest.swift */; };
+		2251DE08267FCA5000D2333D /* CityModelDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251DE07267FCA5000D2333D /* CityModelDataTest.swift */; };
+		2251DE0C267FCE2800D2333D /* CityListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251DE0B267FCE2800D2333D /* CityListUITests.swift */; };
 		225FCE452677AFD800C56AAA /* AQIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FCE442677AFD800C56AAA /* AQIColors.swift */; };
 		225FCE4B2677D98300C56AAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FCE4A2677D98300C56AAA /* HomeViewModel.swift */; };
 		225FCE4F2677E09100C56AAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FCE4E2677E09100C56AAA /* Constants.swift */; };
@@ -63,6 +67,10 @@
 
 /* Begin PBXFileReference section */
 		2251DDF7267FA8B300D2333D /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		2251DDFD267FC95C00D2333D /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		2251DE01267FC9FA00D2333D /* CityViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModelTest.swift; sourceTree = "<group>"; };
+		2251DE07267FCA5000D2333D /* CityModelDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModelDataTest.swift; sourceTree = "<group>"; };
+		2251DE0B267FCE2800D2333D /* CityListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListUITests.swift; sourceTree = "<group>"; };
 		225FCE442677AFD800C56AAA /* AQIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIColors.swift; sourceTree = "<group>"; };
 		225FCE4A2677D98300C56AAA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		225FCE4E2677E09100C56AAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -273,6 +281,9 @@
 			children = (
 				22FAB2CD26767E7300D71E1E /* AQI_appTests.swift */,
 				22FAB2CF26767E7300D71E1E /* Info.plist */,
+				2251DDFD267FC95C00D2333D /* HomeViewModelTest.swift */,
+				2251DE01267FC9FA00D2333D /* CityViewModelTest.swift */,
+				2251DE07267FCA5000D2333D /* CityModelDataTest.swift */,
 			);
 			path = "AQI appTests";
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				22FAB2D826767E7300D71E1E /* AQI_appUITests.swift */,
+				2251DE0B267FCE2800D2333D /* CityListUITests.swift */,
 				22FAB2DA26767E7300D71E1E /* Info.plist */,
 			);
 			path = "AQI appUITests";
@@ -447,6 +459,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FAB2CE26767E7300D71E1E /* AQI_appTests.swift in Sources */,
+				2251DDFE267FC95C00D2333D /* HomeViewModelTest.swift in Sources */,
+				2251DE08267FCA5000D2333D /* CityModelDataTest.swift in Sources */,
+				2251DE02267FC9FB00D2333D /* CityViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2251DE0C267FCE2800D2333D /* CityListUITests.swift in Sources */,
 				22FAB2D926767E7300D71E1E /* AQI_appUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
