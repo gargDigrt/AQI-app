@@ -225,12 +225,36 @@
                                     <constraint firstAttribute="height" constant="50" id="tfb-gB-l8t"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-MA-6MU" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="22.5" y="296" width="369" height="314"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-MA-6MU">
+                                <rect key="frame" x="22.5" y="279" width="369" height="448"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSn-0T-dmu">
+                                        <rect key="frame" x="10" y="68" width="349" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="eq4-kA-4iQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSV-Hz-Wwz" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="20" y="94" width="329" height="329"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kSV-Hz-Wwz" secondAttribute="height" multiplier="1:1" id="pT5-fn-b7s"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kSV-Hz-Wwz" secondAttribute="bottom" constant="25" id="Ix0-Uh-DjS"/>
+                                    <constraint firstItem="oSn-0T-dmu" firstAttribute="leading" secondItem="xVk-MA-6MU" secondAttribute="leading" constant="10" id="P8K-aT-IFb"/>
+                                    <constraint firstItem="kSV-Hz-Wwz" firstAttribute="top" secondItem="oSn-0T-dmu" secondAttribute="bottom" constant="25" id="U2m-vN-dQD"/>
+                                    <constraint firstAttribute="trailing" secondItem="oSn-0T-dmu" secondAttribute="trailing" constant="10" id="bQk-Te-zlY"/>
+                                    <constraint firstAttribute="trailing" secondItem="kSV-Hz-Wwz" secondAttribute="trailing" constant="20" id="c8F-Cf-p4Q"/>
+                                    <constraint firstItem="kSV-Hz-Wwz" firstAttribute="leading" secondItem="xVk-MA-6MU" secondAttribute="leading" constant="20" id="dBc-PZ-hX8"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
+                                        <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -241,11 +265,11 @@
                             <constraint firstItem="xVk-MA-6MU" firstAttribute="centerX" secondItem="KJo-XF-yLP" secondAttribute="centerX" id="0fO-99-F0Y"/>
                             <constraint firstItem="3u6-v3-PBS" firstAttribute="leading" secondItem="KJo-XF-yLP" secondAttribute="leading" constant="25" id="2dw-h9-yuR"/>
                             <constraint firstItem="dn6-2N-Ee3" firstAttribute="leading" secondItem="KJo-XF-yLP" secondAttribute="leading" constant="25" id="2ho-Vb-asi"/>
-                            <constraint firstItem="xVk-MA-6MU" firstAttribute="centerY" secondItem="KJo-XF-yLP" secondAttribute="centerY" id="35Q-Bp-px9"/>
+                            <constraint firstItem="xVk-MA-6MU" firstAttribute="centerY" secondItem="KJo-XF-yLP" secondAttribute="centerY" constant="50" id="35Q-Bp-px9"/>
                             <constraint firstItem="xVk-MA-6MU" firstAttribute="width" secondItem="otO-Dz-IZ8" secondAttribute="width" multiplier="0.891304" id="DNp-ed-0kf"/>
                             <constraint firstItem="dn6-2N-Ee3" firstAttribute="top" secondItem="3u6-v3-PBS" secondAttribute="bottom" constant="20" id="Juv-f8-jAJ"/>
                             <constraint firstItem="3u6-v3-PBS" firstAttribute="top" secondItem="KJo-XF-yLP" secondAttribute="top" constant="25" id="PR0-gc-NAz"/>
-                            <constraint firstItem="xVk-MA-6MU" firstAttribute="height" secondItem="otO-Dz-IZ8" secondAttribute="height" multiplier="0.35" id="TPB-BB-ySV"/>
+                            <constraint firstItem="xVk-MA-6MU" firstAttribute="height" secondItem="otO-Dz-IZ8" secondAttribute="height" multiplier="0.5" id="TPB-BB-ySV"/>
                             <constraint firstItem="Tzd-Py-Ova" firstAttribute="leading" secondItem="3u6-v3-PBS" secondAttribute="trailing" constant="20" id="dTi-aj-1gA"/>
                             <constraint firstItem="3u6-v3-PBS" firstAttribute="width" secondItem="3u6-v3-PBS" secondAttribute="height" multiplier="1:1" id="f08-1b-4Ts"/>
                             <constraint firstItem="Tzd-Py-Ova" firstAttribute="top" secondItem="3u6-v3-PBS" secondAttribute="top" id="pAl-Zw-Vh3"/>
@@ -254,9 +278,10 @@
                     <connections>
                         <outlet property="aqiIndexLabel" destination="95F-UC-Bed" id="mSN-0b-lsA"/>
                         <outlet property="aqiStatusLabel" destination="Sz6-HL-6zD" id="Abh-dI-Az8"/>
+                        <outlet property="chartContainerView" destination="xVk-MA-6MU" id="4ej-l6-2Pt"/>
                         <outlet property="cityNameLabel" destination="Tzd-Py-Ova" id="407-Uy-3pM"/>
                         <outlet property="indexView" destination="3u6-v3-PBS" id="Lbz-Cd-i9X"/>
-                        <outlet property="lineChartView" destination="xVk-MA-6MU" id="jg3-IW-YbW"/>
+                        <outlet property="lineChartView" destination="kSV-Hz-Wwz" id="x83-4X-Csz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHb-en-LMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
