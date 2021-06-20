@@ -8,3 +8,4 @@
 import Foundation
 
 let WEB_SOCKET_SERVER_URL = "wss://city-ws.herokuapp.com/"
+let JUST_NOW = "Updated just now"

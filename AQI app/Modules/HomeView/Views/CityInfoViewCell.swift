@@ -24,6 +24,8 @@ class CityInfoViewCell: UITableViewCell {
                 self.aqiStatusLabel.textColor = self.cityVM.aqiColor
                 self.aqiIndexLabel.text = self.cityVM.aqiValue
                 self.indexView.backgroundColor = self.cityVM.aqiColor
+                self.aqiIndexLabel.layer.addCornerRadiusShadow()
+//                self.indexView.layer.addCornerRadiusShadow(cornerRadiusValue:15)
             }
         }
     }
@@ -31,6 +33,7 @@ class CityInfoViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.layer.addCornerRadiusShadow()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

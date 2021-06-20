@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 protocol CityAQIUpdateDelegate: class {
     func didReceiveCityAQIUpdate(cities: [CityViewModel])
 }
@@ -29,11 +27,19 @@ class HomeViewController: UIViewController {
         //Set refresh delegate for AQI updates
         homeViewModel.refreshDelegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Hide the navigation bar
+        self.navigationController?.navigationBar.isHidden = true
+    }
 }
 
 
 //MARK:- AQIRefreshDelegate
 extension HomeViewController: AQIRefreshDelegate {
+    
     func refreshAQIdata(cities: [CityViewModel]) {
         self.cities = cities
         DispatchQueue.main.async {

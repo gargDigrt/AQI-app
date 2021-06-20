@@ -1,5 +1,5 @@
 //
-//  CALayer+Extensions.swift
+//  CALayer+Extension.swift
 //  AQI app
 //
 //  Created by Vivek on 20/06/21.
@@ -8,7 +8,7 @@
 import UIKit
 
 extension CALayer {
-    func applyCornerRadiusShadow(
+    func addCornerRadiusShadow(
         color: UIColor = .black,
         alpha: Float = 0.5,
         x: CGFloat = 0,
